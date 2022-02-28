@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:page_transition/page_transition.dart';
 
 void main() {
   runApp(SplashScreen());
@@ -126,7 +125,6 @@ class SplashScreen extends StatelessWidget {
             splash: "images/og-logo.jpeg",
             nextScreen: MyApp(),
             splashTransition: SplashTransition.fadeTransition,
-            // pageTransitionType: PageTransitionType.scale,
             backgroundColor: Colors.blue));
   }
 }
