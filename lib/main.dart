@@ -120,7 +120,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Clean Code',
+        title: 'MSGINC',
         home: AnimatedSplashScreen(
             duration: 3000,
             splash: "images/og-logo.jpeg",
