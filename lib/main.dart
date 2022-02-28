@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:page_transition/page_transition.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(SplashScreen());
 }
 
 class MyApp extends StatelessWidget {
@@ -111,5 +113,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+}
+
+class SplashScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Clean Code',
+        home: AnimatedSplashScreen(
+            duration: 3000,
+            splash: "images/og-logo.jpeg",
+            nextScreen: MyApp(),
+            splashTransition: SplashTransition.fadeTransition,
+            // pageTransitionType: PageTransitionType.scale,
+            backgroundColor: Colors.blue));
   }
 }
